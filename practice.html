@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>All Pokemon</title>
+<style>
+#pokedex {
+display: grid;
+grid-template-columns: repeat(auto-fill, 96px);
+gap: 10px;
+}
+
+img {
+width: 96px;
+height: 96px;
+}
+</style>
+</head>
+<body>
+
+<h1>All Pokémon</h1>
+<div id="pokedex"></div>
+
+<script>
+const pokedex = document.getElementById("pokedex");
+
+for (let i = 1; i <= 1025; i++) {
+const img = document.createElement("img");
+img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${i}.png`;
+img.alt = `Pokemon ${i}`;
+pokedex.appendChild(img);
+}
+</script>
+
+</body>
+</html>
